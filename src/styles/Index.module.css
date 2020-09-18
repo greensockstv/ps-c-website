@@ -1,4 +1,19 @@
 .logo {
-  width: auto;
-  height: 60px;
+}
+.appBar {
+  background-color: white !important;
+}
+.section1 {
+  width: 100%;
+  min-height: 90vh;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/ps-c-website.appspot.com/o/giginyc.jpg?alt=media&token=5e624be2-4e91-43e8-87e1-ae669181339e");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: darkblue;
+  background-size: cover;
+}
+.downIcon {
+  transform: rotate(-90deg) !important;
+  color: white;
+  font-size: 9em !important;
 }
