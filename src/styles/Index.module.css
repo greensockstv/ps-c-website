@@ -9,11 +9,67 @@
   background-image: url("https://firebasestorage.googleapis.com/v0/b/ps-c-website.appspot.com/o/giginyc.jpg?alt=media&token=5e624be2-4e91-43e8-87e1-ae669181339e");
   background-position: center;
   background-repeat: no-repeat;
-  background-color: darkblue;
+  background-color: #004171;
   background-size: cover;
 }
 .downIcon {
   transform: rotate(-90deg) !important;
   color: white;
   font-size: 9em !important;
+}
+.titles {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 72pt !important;
+  color: #bb9273 !important;
+}
+.texts {
+  font-size: 32pt !important;
+  color: black !important;
+  font-family: adobe-garamond-pro, serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+.texts2 {
+  font-size: 16pt !important;
+  font-weight: 400 !important;
+  font-family: "Open Sans", sans-serif !important;
+  letter-spacing: 10pt;
+}
+.texts2gold {
+  font-size: 18pt !important;
+  font-weight: 400 !important;
+  color: #bb9273 !important;
+  font-family: "Open Sans", sans-serif !important;
+  letter-spacing: 10pt;
+}
+.portrait {
+  width: 100%;
+  height: auto;
+}
+.portraitContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  margin: 5em 4em;
+}
+.goldButton {
+  background-color: #bb9273 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 1.2pt !important;
+}
+.efficiencySection {
+  background-color: lightgray !important;
+  padding: 4em 3em;
+}
+.contactSection {
+  padding: 4em 3em;
 }

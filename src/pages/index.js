@@ -37,8 +37,10 @@ export default function Home() {
         </Toolbar>
       </AppBar>
       <section className={styles.section1}>
-        <Typography variant="h1">High Level Experience</Typography>
-        <Typography>
+        <Typography variant="h1" className={styles.titles}>
+          High Level Experience
+        </Typography>
+        <Typography variant="body1" className={styles.texts}>
           „Unternehmen sind lebendige Strukturen die man respektvoll an die
           Umgebung anpassen muss. Analytisches Denken und intelligentes
           Management auf höchstem Niveau bilden die Basis für die Unterstützug
@@ -50,21 +52,45 @@ export default function Home() {
         </IconButton>
       </section>
       <section>
-        <Grid container>
-          <Grid item>
-            <img src="https://lh3.googleusercontent.com/EDTjpQan5NUSn0VbT6pLpUJX2G0MxAgaZpNDyNqZtlLVMRQL-V9Z4Y7l1iPLV3SSkz53=s151"></img>
+        <div className={styles.profile}>
+          <Grid
+            container
+            alignItems="center"
+            justify="space-between"
+            spacing={9}
+          >
+            <Grid item xs={12} md={6}>
+              <div className={styles.portraitContainer}>
+                <img
+                  src="https://lh3.googleusercontent.com/EDTjpQan5NUSn0VbT6pLpUJX2G0MxAgaZpNDyNqZtlLVMRQL-V9Z4Y7l1iPLV3SSkz53=s151"
+                  className={styles.portrait}
+                />
+              </div>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography
+                className={styles.texts2gold}
+                variant="body2"
+                gutterBottom
+              >
+                PHILIPP SCHULZ ÜBER DIE HERAUSFORDERUNGEN VON DIGITALER
+                DISRUPTION UND INNOVATIVEM POTENZIAL
+              </Typography>
+              <Button
+                size="large"
+                className={styles.goldButton}
+                disableElevation
+              >
+                Weiter Lesen
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Typography>
-              PHILIPP SCHULZ ÜBER DIE HERAUSFORDERUNGEN VON DIGITALER DISRUPTION
-              UND INNOVATIVEM POTENZIAL
-            </Typography>
-            <Button>Weiter Lesen</Button>
-          </Grid>
-        </Grid>
+        </div>
       </section>
-      <section>
-        <Typography>EFFIZIENZ UND EXZELLENZ</Typography>
+      <section className={styles.efficiencySection}>
+        <Typography variant="h1" component="h2" className={styles.titles}>
+          EFFIZIENZ UND EXZELLENZ
+        </Typography>
         <Typography>DAS LEISTUNGSSPEKTRUM</Typography>
         <Bar
           title="BERATUNG"
@@ -86,13 +112,13 @@ Quantensprung für Ihren Erfolg bedeuten. Als Vorbereitung
 auf neue Aufgaben und Handlungsfelder."
         />
       </section>
-      <section>
+      <section className={styles.contactSection}>
         <Typography>HIGH LEVEL CONSULTING</Typography>
         <Typography>
           Höchste Zeit für eine punktgenaue Analyse und zielgerichtetes Handeln
           zur Optimierung Ihrer UnternehmensPerformance ...
         </Typography>
-        <Button>KONTAKTIEREN SIE UNS</Button>
+        <Button className={styles.goldButton}>KONTAKTIEREN SIE UNS</Button>
       </section>
       <footer className={styles.footer}>
         <Grid container justify="space-between" alignItems="center">
