@@ -37,7 +37,7 @@ export default function Home() {
         </Toolbar>
       </AppBar>
       <section className={styles.section1}>
-        <Typography>High Level Experience</Typography>
+        <Typography variant="h1">High Level Experience</Typography>
         <Typography>
           „Unternehmen sind lebendige Strukturen die man respektvoll an die
           Umgebung anpassen muss. Analytisches Denken und intelligentes
