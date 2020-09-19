@@ -2,10 +2,10 @@ import React from "react"
 import styles from "../styles/index.module.css"
 import { Helmet } from "react-helmet"
 import Bar from "../components/bar.js"
+import Footer from "../components/footer"
 import "../index.css"
+import Navbar from "../components/navbar"
 import {
-  AppBar,
-  Toolbar,
   IconButton,
   Grid,
   Typography,
@@ -13,11 +13,12 @@ import {
   useTheme,
   useMediaQuery,
 } from "@material-ui/core"
-import MenuIcon from "@material-ui/icons/Menu"
-import LinkedInIcon from "@material-ui/icons/LinkedIn"
 export default function Home() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up("md"))
+  React.useEffect(() => {
+    console.log("made with ❤️ by GreenSocks")
+  })
   return (
     <>
       <Helmet>
@@ -26,32 +27,7 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
       </Helmet>
       <div>
-        <AppBar position="sticky" className={styles.appBar}>
-          <Toolbar>
-            <Grid container alignItems="center" justify="space-between">
-              <Grid item xs={12} md={6}>
-                <a href="/">
-                  <div className={styles.logoContainer}>
-                    <img
-                      src="https://firebasestorage.googleapis.com/v0/b/ps-c-website.appspot.com/o/schriftzugPSk2.jpg?alt=media&token=6e4207c0-6552-495f-aa20-1776ab4e6328"
-                      className={styles.logo}
-                      alt="logo"
-                    />
-                  </div>
-                </a>
-              </Grid>
-              <Grid item xs={12} md={1}>
-                <Grid container justify="flex-end" alignItems="center">
-                  <Grid item>
-                    <IconButton edge="start" aria-label="menu" size="medium">
-                      <MenuIcon />
-                    </IconButton>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Toolbar>
-        </AppBar>
+        <Navbar />
         <section className={styles.section1}>
           <div className={styles.section1container}>
             <Typography
@@ -60,7 +36,7 @@ export default function Home() {
               gutterBottom
               display="block"
             >
-              High Level Experience
+              High Level{!matches && <br />} Experience
             </Typography>
             <Grid container justify="flex-end">
               <Grid item>
@@ -181,12 +157,13 @@ auf neue Aufgaben und Handlungsfelder."
               gutterBottom
               className={!matches ? styles.titlesMobile : styles.titles}
             >
-              HIGH LEVEL CONSULTING
+              HIGH LEVEL {!matches && <br />} CONSULTING
             </Typography>
             <Grid container justify={"flex-end"}>
               <Grid item>
                 <Typography
                   variant="body1"
+                  s
                   className={
                     matches ? styles.textsRight : styles.textsRightMobile
                   }
@@ -210,34 +187,7 @@ auf neue Aufgaben und Handlungsfelder."
             </Grid>
           </div>
         </section>
-        <footer className={styles.footer}>
-          <Grid
-            container
-            justify={matches ? "space-between" : "center"}
-            alignItems="center"
-            direction={matches ? "row" : "column"}
-          >
-            <Grid item>
-              <a href="/">
-                <div className={styles.logoContainer}>
-                  <img
-                    src="https://firebasestorage.googleapis.com/v0/b/ps-c-website.appspot.com/o/schriftzugPSk2.jpg?alt=media&token=6e4207c0-6552-495f-aa20-1776ab4e6328"
-                    className={styles.logo}
-                    alt="logo"
-                  />
-                </div>
-              </a>
-            </Grid>
-            <Grid item>
-              <Button>Impressum</Button>
-              <Button>Datenschutz</Button>
-              <Button>Kontakt</Button>
-              <IconButton>
-                <LinkedInIcon />
-              </IconButton>
-            </Grid>
-          </Grid>
-        </footer>
+        <Footer />
       </div>
     </>
   )
