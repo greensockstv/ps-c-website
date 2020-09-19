@@ -7,14 +7,18 @@ import {
   Toolbar,
   IconButton,
   Grid,
-  Divider,
   Typography,
   Button,
+  SvgIcon,
+  useTheme,
+  useMediaQuery,
 } from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 export default function Home() {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up("sm"))
   return (
     <div>
       <AppBar position="sticky" className={styles.appBar}>
@@ -37,21 +41,39 @@ export default function Home() {
         </Toolbar>
       </AppBar>
       <section className={styles.section1}>
-        <Typography variant="h1" className={styles.titles}>
-          High Level Experience
-        </Typography>
-        <Typography variant="body1" className={styles.texts}>
-          „Unternehmen sind lebendige Strukturen die man respektvoll an die
-          Umgebung anpassen muss. Analytisches Denken und intelligentes
-          Management auf höchstem Niveau bilden die Basis für die Unterstützug
-          erfahrener, aber auch junger Unternehmen auf ihrem Weg des Wachstums
-          und der Veränderung.“
-        </Typography>
-        <IconButton>
-          <ArrowBackIosIcon className={styles.downIcon} fontStyle="large" />
-        </IconButton>
+        <div className={styles.section1container}>
+          <Typography variant="h1" className={styles.titles} gutterBottom>
+            High Level Experience
+          </Typography>
+          <Grid container justify="flex-end">
+            <Grid item>
+              <Typography
+                variant="body1"
+                className={
+                  matches
+                    ? `${styles.textsHeading}`
+                    : `${styles.textsHeadingMobile}`
+                }
+              >
+                „Unternehmen sind lebendige Strukturen die man respektvoll an
+                die Umgebung anpassen muss. Analytisches Denken und
+                intelligentes Management auf höchstem Niveau bilden die Basis
+                für die Unterstützug erfahrener, aber auch junger Unternehmen
+                auf ihrem Weg des Wachstums und der Veränderung.“
+              </Typography>
+              <IconButton size="large" href="#middle">
+                <svg className={styles.down}>
+                  <path
+                    fill="#fff"
+                    d="M23.1,34.1L51.5 61.7 80 34.1 81.5 35 51.5 64.1 21.5 35 23.1 34.1 z"
+                  ></path>
+                </svg>
+              </IconButton>
+            </Grid>
+          </Grid>
+        </div>
       </section>
-      <section>
+      <section id="middle">
         <div className={styles.profile}>
           <Grid
             container
@@ -88,10 +110,19 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.efficiencySection}>
-        <Typography variant="h1" component="h2" className={styles.titles}>
-          EFFIZIENZ UND EXZELLENZ
-        </Typography>
-        <Typography>DAS LEISTUNGSSPEKTRUM</Typography>
+        <div className={styles.efficiencySectionContainer}>
+          <Typography
+            variant="h1"
+            component="h2"
+            className={styles.titles}
+            gutterBottom={true}
+          >
+            EFFIZIENZ UND EXZELLENZ
+          </Typography>
+          <Typography className={styles.texts2subtitles} variant="h5">
+            DAS LEISTUNGSSPEKTRUM
+          </Typography>
+        </div>
         <Bar
           title="BERATUNG"
           text="Betriebliche Herausforderungen erfordern oftmals externe
@@ -113,12 +144,28 @@ auf neue Aufgaben und Handlungsfelder."
         />
       </section>
       <section className={styles.contactSection}>
-        <Typography>HIGH LEVEL CONSULTING</Typography>
-        <Typography>
-          Höchste Zeit für eine punktgenaue Analyse und zielgerichtetes Handeln
-          zur Optimierung Ihrer UnternehmensPerformance ...
-        </Typography>
-        <Button className={styles.goldButton}>KONTAKTIEREN SIE UNS</Button>
+        <div className={styles.contactSectionContainer}>
+          <Typography variant="h3" gutterBottom className={styles.titles}>
+            HIGH LEVEL CONSULTING
+          </Typography>
+          <Grid container justify={"flex-end"}>
+            <Grid item>
+              <Typography
+                variant="body1"
+                className={
+                  matches ? styles.textsRight : styles.textsRightMobile
+                }
+                gutterBottom
+              >
+                Höchste Zeit für eine punktgenaue Analyse und zielgerichtetes
+                Handeln zur Optimierung Ihrer Unternehmens Performance ...
+              </Typography>
+              <Button size="large" className={styles.goldButton}>
+                KONTAKTIEREN SIE UNS
+              </Button>
+            </Grid>
+          </Grid>
+        </div>
       </section>
       <footer className={styles.footer}>
         <Grid container justify="space-between" alignItems="center">
@@ -139,11 +186,6 @@ auf neue Aufgaben und Handlungsfelder."
             </IconButton>
           </Grid>
         </Grid>
-        <Typography>
-          ©_Alle in dieser Präsentation enthaltenen Vorschläge – konzeptionell,
-          textlich u. grafisch – sind urheberrechtlich geschützt u. Eigentum von
-          Mag. Richard Bayer. Linz, Juni 2020.
-        </Typography>
       </footer>
     </div>
   )

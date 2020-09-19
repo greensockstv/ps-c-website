@@ -1,0 +1,23 @@
+.divider {
+  color: white !important;
+  background-color: white !important;
+  height: 3px !important;
+}
+.subtitle {
+  font-size: 18pt !important;
+  font-weight: 400 !important;
+  color: #bb9273 !important;
+  font-family: "Open Sans", sans-serif !important;
+  letter-spacing: 1.2pt;
+}
+.text {
+  font-size: 14pt !important;
+  color: black !important;
+  font-family: adobe-garamond-pro, serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  letter-spacing: 1.2pt;
+}
+.container {
+  margin: 1.9em 1em;
+}
