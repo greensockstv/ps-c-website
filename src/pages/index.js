@@ -17,12 +17,19 @@ import MenuIcon from "@material-ui/icons/Menu"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 export default function Home() {
   const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.up("sm"))
+  const matches = useMediaQuery(theme.breakpoints.up("md"))
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Philipp Schulz consulting</title>
+        <meta name="robots" content="index, follow" />
+{
+  "@context" : "http://schema.org",
+  "@type" : "LocalBusiness",
+  "name" : "PHILIPP SCHULZ",
+  "image" : "https://lh3.googleusercontent.com/EDTjpQan5NUSn0VbT6pLpUJX2G0MxAgaZpNDyNqZtlLVMRQL-V9Z4Y7l1iPLV3SSkz53=s151"
+}
       </Helmet>
       <div>
         <AppBar position="sticky" className={styles.appBar}>
@@ -212,7 +219,7 @@ auf neue Aufgaben und Handlungsfelder."
         <footer className={styles.footer}>
           <Grid
             container
-            justify="space-between"
+            justify={matches ? "space-between" : "center"}
             alignItems="center"
             direction={matches ? "row" : "column"}
           >
