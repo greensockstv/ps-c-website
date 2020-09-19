@@ -24,12 +24,6 @@ export default function Home() {
         <meta charSet="utf-8" />
         <title>Philipp Schulz consulting</title>
         <meta name="robots" content="index, follow" />
-{
-  "@context" : "http://schema.org",
-  "@type" : "LocalBusiness",
-  "name" : "PHILIPP SCHULZ",
-  "image" : "https://lh3.googleusercontent.com/EDTjpQan5NUSn0VbT6pLpUJX2G0MxAgaZpNDyNqZtlLVMRQL-V9Z4Y7l1iPLV3SSkz53=s151"
-}
       </Helmet>
       <div>
         <AppBar position="sticky" className={styles.appBar}>

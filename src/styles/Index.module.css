@@ -87,13 +87,13 @@
 
 .texts2 {
   font-size: 16pt !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   font-family: "Open Sans", sans-serif !important;
   letter-spacing: 10pt;
 }
 .texts2gold {
   font-size: 18pt !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   color: #bb9273 !important;
   font-family: "Open Sans", sans-serif !important;
   letter-spacing: 1.2pt;
@@ -101,14 +101,14 @@
 .texts2subtitles {
   color: black;
   font-size: 23pt !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   font-family: "Open Sans", sans-serif !important;
   letter-spacing: 1.2pt;
 }
 .texts2subtitlesMobile {
   color: black;
   font-size: 17pt !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   font-family: "Open Sans", sans-serif !important;
   letter-spacing: 1.2pt;
 }
